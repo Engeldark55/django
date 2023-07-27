@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+-->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Django</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Django en el Fullstack</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">contactame</a></li>
+                <li><a href="">Redes Sociales</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h3>contenido General: </h3>
+            {%block contenido%}
+            <h3>index</h3>
+            {%endblock%}
+        </main>
+    </div>
+</body>
+</html>
