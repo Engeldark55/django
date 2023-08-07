@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from rest_framework.documentation import include_docs_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     #incluimos la RESTAPI
-    path("RestApi/v001/", include("RestApi.urls"))
+    path("RestApi/v001/", include("RestApi.urls")),
+    #docs de crear esta url pasar a settig e incluir el path el ello´,ñm
+    path("docs/", include_docs_urls(title="Documentacion de la API"))
 ]
